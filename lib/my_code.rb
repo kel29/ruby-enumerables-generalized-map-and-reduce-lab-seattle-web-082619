@@ -4,16 +4,16 @@ def map(arr)
 end
 
 def reduce(arr, v = nil)
- if v
-   r = v
-   i = 0 
- else
-   r = arr[v] 
-   i = 1
+  if v
+    r = v
+    i = 0
+  else
+    accum = s[0]
+    i = 1
   end
-  until i > arr.length
-    r = yield(r, arr[i])
+  while i < s.length
+    accum = yield(accum, s[i])
     i += 1
   end
-  r
+  accum
 end
