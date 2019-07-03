@@ -11,7 +11,7 @@ def reduce(arr, v = nil)
     r = arr[0]
     i = 1
   end
-  until i > arr.length
+  until i >= arr.length
     r = yield(r, arr[i])
     i += 1
   end
