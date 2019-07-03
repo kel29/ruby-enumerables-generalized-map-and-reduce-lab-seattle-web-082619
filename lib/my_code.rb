@@ -4,6 +4,7 @@ def map(arr)
 end
 
 def reduce(arr, v = 0)
+  v ? 
   arr.each do |i|
     v = yield(i, arr[v])
   end
