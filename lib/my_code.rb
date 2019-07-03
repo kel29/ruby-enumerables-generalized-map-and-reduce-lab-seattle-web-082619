@@ -3,7 +3,7 @@ def map(arr)
   arr.map { |i| yield i }
 end
 
-def reduce(arr, v = 0)
+def reduce(arr, v = nil)
  if v
    r = v
    i = 0 
