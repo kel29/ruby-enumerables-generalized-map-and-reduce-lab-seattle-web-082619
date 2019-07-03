@@ -4,7 +4,7 @@ def map(arr)
 end
 
 def reduce(arr, v = 0)
-  v ? r = v : r = arr[v]
+  v ? r = v && i = 0 : r = arr[v] && i = 1
   until i > arr.length
     v = yield(v, arr[i])
     i += 1
