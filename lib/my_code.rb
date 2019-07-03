@@ -5,8 +5,9 @@ end
 
 def reduce(arr, v = 0)
   v ? r = v : r = arr[v]
-  arr.each do |i|
-    r = yield(v, arr[i])
+  until i > arr.length
+    v = yield(v, arr[i])
+    i += 1
   end
   r
 end
