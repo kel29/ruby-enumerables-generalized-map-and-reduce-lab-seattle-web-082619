@@ -5,7 +5,6 @@ end
 
 def reduce(arr, v = 0)
   arr.each do |i|
-    s = yield(s, arr[i])
-    i += 1
+    yield(v, arr[i])
   end
 end
