@@ -4,9 +4,10 @@ def map(arr)
 end
 
 def reduce(arr, v = 0)
-  v ? r = v : r = arr[v]
-  arr.each do |i|
+ v ? r = v && i = 0 : r = arr[v] && i = 1
+  until i > arr.length
     r = yield(r, arr[i])
+    i += 1
   end
   r
 end
