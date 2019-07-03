@@ -8,7 +8,7 @@ def reduce(arr, v = nil)
     r = v
     i = 0
   else
-    accum = s[0]
+    r = s[0]
     i = 1
   end
   while i < s.length
