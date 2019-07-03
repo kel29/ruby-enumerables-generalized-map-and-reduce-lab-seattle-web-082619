@@ -8,12 +8,12 @@ def reduce(arr, v = nil)
     r = v
     i = 0
   else
-    r = s[0]
+    r = arr[0]
     i = 1
   end
-  while i < s.length
-    accum = yield(accum, s[i])
+  until i > arr.length
+    r = yield(r, arr[i])
     i += 1
   end
-  accum
+  r
 end
